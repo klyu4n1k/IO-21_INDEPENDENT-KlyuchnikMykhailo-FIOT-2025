@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Самостійна робота №1 - Основи HTML</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Самостійна робота №1: Основи HTML</h1>
+    <p>
+      Цей документ демонструє приклади роботи з HTML, включаючи посилання,
+      таблиці, зображення, списки та форми.
+    </p>
+
+    <h2>Основи HTML</h2>
+    <p>
+      HTML (HyperText Markup Language) — це стандартна мова розмітки для
+      створення веб-сторінок. Нижче наведено приклади основних елементів HTML.
+    </p>
+    <p>
+      <strong>Приклад параграфа:</strong> Це текст у параграфі, створений за
+      допомогою тегу &lt;p&gt;.
+    </p>
+    <p><strong>Заголовки:</strong></p>
+    <h3>Заголовок рівня 3</h3>
+    <h4>Заголовок рівня 4</h4>
+
+    <h2>Посилання</h2>
+    <div class="link-example">
+      <p>
+        <a
+          href="https://w3schoolsua.github.io/html/html_intro.html"
+          target="_blank"
+          >Що таке HTML?</a
+        >
+        (зовнішнє посилання)
+      </p>
+      <p>
+        <a href="#forms">Перейти до розділу "Форми"</a> (внутрішнє посилання -
+        закладка)
+      </p>
+    </div>
+
+    <h2>Зображення</h2>
+    <p>Приклад вставки зображення з альтернативним текстом:</p>
+    <img src="#" alt="Тестове зображення" />
+    <p>
+      Приклад використання елемента &lt;picture&gt; для адаптивних зображень:
+    </p>
+    <picture>
+      <source
+        media="(max-width: 600px)"
+        srcset="
+          https://images.unsplash.com/photo-1549948558-1c6406684186?fm=jpg&q=60&w=3000
+        "
+      />
+      <source
+        media="(max-width: 900px)"
+        srcset="
+          https://images.pexels.com/photos/1496373/pexels-photo-1496373.jpeg
+        "
+      />
+      <img
+        style="width: 400px"
+        src="https://static.vecteezy.com/system/resources/thumbnails/052/248/075/small_2x/peacock-feather-wallpaper-hd-wallpaper-photo.jpeg"
+        alt="Адаптивне зображення"
+      />
+    </picture>
+
+    <p>Приклад карти зображень:</p>
+    <img
+      src="https://static6.depositphotos.com/1003722/641/v/450/depositphotos_6416669-stock-illustration-two-hemispheres-map.jpg"
+      alt="Карта зображення"
+      usemap="#image-map"
+    />
+    <map name="image-map">
+      <area
+        shape="rect"
+        coords="0,0,300, 297"
+        href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D1%85%D1%96%D0%B4%D0%BD%D0%B0_%D0%BF%D1%96%D0%B2%D0%BA%D1%83%D0%BB%D1%8F"
+        alt="Ліва частина"
+        title="Західна півкуля"
+      />
+      <area
+        shape="rect"
+        coords="300,0,600,297"
+        href="https://uk.wikipedia.org/wiki/%D0%A1%D1%85%D1%96%D0%B4%D0%BD%D0%B0_%D0%BF%D1%96%D0%B2%D0%BA%D1%83%D0%BB%D1%8F"
+        alt="Права частина"
+        title="Східна півкуля"
+      />
+    </map>
+
+    <h2 id="tables">Таблиці</h2>
+    <table>
+      <caption>
+        Приклад таблиці: Розклад занять
+      </caption>
+      <colgroup>
+        <col span="1" style="background-color: #f0f8ff" />
+        <col span="2" style="background-color: #e6e6fa" />
+      </colgroup>
+      <tr>
+        <th>День</th>
+        <th>Предмет</th>
+        <th>Час</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Понеділок</td>
+        <td>Фронтенд розробка</td>
+        <td>10:00-12:00</td>
+      </tr>
+      <tr>
+        <td>Бекенд розробка</td>
+        <td>14:00-16:00</td>
+      </tr>
+      <tr>
+        <td>Вівторок</td>
+        <td colspan="2">Вільний день</td>
+      </tr>
+    </table>
+
+    <h2>Списки</h2>
+    <p><strong>Невпорядкований список (ul):</strong></p>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <p><strong>Впорядкований список (ol):</strong></p>
+    <ol>
+      <li>Вивчити HTML</li>
+      <li>Вивчити CSS</li>
+      <li>Вивчити JavaScript</li>
+    </ol>
+    <p><strong>Список описів (dl):</strong></p>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Мова розмітки для створення структури веб-сторінок.</dd>
+      <dt>CSS</dt>
+      <dd>Мова стилів для оформлення веб-сторінок.</dd>
+    </dl>
+
+    <h2 id="forms">Форми</h2>
+    <form id="contactForm" action="#" method="get">
+      <label for="name">Ім'я:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Введіть ваше ім'я"
+        required
+      />
+
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Введіть ваш email"
+        required
+      />
+
+      <label for="course">Курс:</label>
+      <select id="course" name="course">
+        <option value="frontend">Фронтенд розробка</option>
+        <option value="backend">Бекенд розробка</option>
+      </select>
+
+      <label for="message">Повідомлення:</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Ваше повідомлення"
+      ></textarea>
+
+      <input type="submit" value="Надіслати" />
+    </form>
+
+    <h2>HTML5 Елементи</h2>
+    <p>Приклад використання семантичних елементів HTML5:</p>
+    <header>
+      <h3>Заголовок сторінки</h3>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#forms">Форми</a></li>
+        <li><a href="#tables">Таблиці</a></li>
+      </ul>
+    </nav>
+    <article>
+      <p>Це приклад статті, створеної за допомогою тегу &lt;article&gt;.</p>
+    </article>
+    <footer>
+      <p>© 2025 Самостійна робота №1</p>
+    </footer>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const course = document.getElementById("course").value;
+          const message = document.getElementById("message").value;
+
+          let course_name;
+          if (course == "frontend") course_name = "Фронтенд розробка";
+          else course_name = "Бекенд розробка";
+
+          alert(
+            `Користувач ${name} з курсу "${course_name}" відправив повідомлення "${message}"`
+          );
+        });
+    </script>
+  </body>
+</html>
